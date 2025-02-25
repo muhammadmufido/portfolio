@@ -79,6 +79,6 @@ Jika ingin berkontribusi:
 
 Jika ada pertanyaan atau saran, hubungi saya di:
 
-- GitHub: [bayutri](https://github.com/bayutri)
-- Email: bthard777@gmail.com
+- GitHub: [bayu77-app](https://github.com/bayu77-app)
+- Email: bayurara555@gmail.com
 
