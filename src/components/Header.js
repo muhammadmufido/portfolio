@@ -12,7 +12,7 @@ const Header = () => {
       <div className="flex items-center justify-between">
         {/* logo */}
         <a href="#">
-          <h1 className='lg:text-[36px] sm::text-[18px] text-accent font-bold'>BAYU TRIHARDiAN <br /> SYAH</h1>
+          <h1 className='lg:text-[36px] sm::text-[18px] text-blue-500  font-bold'>BAYU TRIHARDiAN <br /> SYAH</h1>
         </a>
         {/* button */}
         <Link to='contact' activeClass='active' smooth={true} spy={true} className="cursor-pointer btn items-center 

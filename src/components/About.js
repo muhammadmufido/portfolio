@@ -19,15 +19,7 @@ const About = () => {
     <section className="section" id="about" ref={ref}>
       <div className="container mx-auto">
         <div className="flex flex-col gap-y-5 lg:flex-row lg:items-center lg:gap-y-0 lg:gap-x-10 min-h-screen">
-          {/* img */}
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 bg-about bg-cover lg:bg-contain mix-blend-lighten bg-no-repeat min-h-[400px]  xm:h-[450px] lg:h-[640px] bg-top"
-          ></motion.div>
-
+        
           {/* text */}
           <motion.div
             variants={fadeIn("left", 0.5)}
@@ -36,7 +28,7 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1"
           >
-            <h2 className="h2 text-accent">About me.</h2>
+            <h2 className="h2 text-blue-600 font-bold">About me.</h2>
             <h3 className="h3 mb-4">
               I am a beginner software developer and designer from Indonesia. I have been in the software development field for more than 2 years. I have a strong background in programming.
             </h3>
@@ -90,6 +82,14 @@ const About = () => {
               </Link>
             </div>
           </motion.div>
+            {/* img */}
+            <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 bg-about bg-cover lg:bg-contain mix-blend-lighten bg-no-repeat min-h-[400px]  xm:h-[450px] lg:h-[640px] bg-top"
+          ></motion.div>
         </div>
       </div>
     </section>

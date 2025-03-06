@@ -5,32 +5,29 @@
 .btn {
   background: linear-gradient(
     92.23deg,
-    #ff56f6 21.43%,
-    #b936ee 50.63%,
-    #3bace2 100%,
-    #406aff 117.04%
+    #1e3a8a 21.43%, /* Deep Blue */
+    #3b82f6 50.63%, /* Bright Blue */
+    #60a5fa 100% /* Light Sky Blue */
   );
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  box-shadow: 0px 4.42184px 107.23px rgba(59, 130, 246, 0.51);
 }
 
 .btn:hover {
   background: linear-gradient(
     92.23deg,
-    #406aff 21.43%,
-    #3bace2 50.63%,
-    #b936ee 100%,
-    #ff56f6 117.04%
+    #60a5fa 21.43%, /* Light Sky Blue */
+    #3b82f6 50.63%, /* Bright Blue */
+    #1e3a8a 100% /* Deep Blue */
   );
 }
-
 .gradient,
 .active {
   background: linear-gradient(
     92.23deg,
-    #406aff 21.43%,
-    #3bace2 50.63%,
-    #b936ee 100%,
-    #ff56f6 117.04%
+    #1a73e8 21.43%, /* Royal Blue */
+    #42a5f5 50.63%, /* Sky Blue */
+    #81d4fa 100%, /* Light Blue */
+    #b3e5fc 117.04% /* Ice Blue */
   );
 }
 

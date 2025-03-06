@@ -14,7 +14,7 @@ const services = [
     {
       name: "Frontend Development",
       description:
-        "Membangun antarmuka web modern menggunakan teknologi terbaru seperti html, css, js, laravel, React.js, Tailwind CSS, dan lainnya untuk pengalaman pengguna yang optimal.",
+        "Membangun antarmuka web modern menggunakan teknologi terbaru seperti html5, css, js, laravel, React.js, Tailwind CSS, dan lainnya untuk pengalaman pengguna yang optimal.",
       Link: "Learn more",
     },
     {
@@ -45,7 +45,7 @@ const Services = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0"
           >
-            <h2 className="h2 text-accent mb-6">What I Do.</h2>
+            <h2 className="h2 text-blue-200 mb-6">What I Do.</h2>
             <h3 className="h3 max-w-[455px] mb-16">
               I have experience in developing web applications, mobile
               applications. I have also experience in
