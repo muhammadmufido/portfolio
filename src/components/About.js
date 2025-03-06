@@ -4,6 +4,10 @@ import { useInView } from "react-intersection-observer";
 //motion
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { BiHomeAlt, BiUser } from 'react-icons/bi';
+import { BsClipboardData, BsBriefcase, BsChatSquare, BsChatSquareText } from 'react-icons/bs';
+//link
+import { Link } from 'react-scroll';
 
 
 const About = () => {
@@ -34,14 +38,10 @@ const About = () => {
           >
             <h2 className="h2 text-accent">About me.</h2>
             <h3 className="h3 mb-4">
-              I'm a software developer and designer from Indonesia. I have been
-              working in the field of software development for over 2 years. I
-              have a strong background in programming.
+              I am a beginner software developer and designer from Indonesia. I have been in the software development field for more than 2 years. I have a strong background in programming.
             </h3>
             <p className="mb-6">
-              I have experience in developing web applications, mobile
-              applications, and desktop applications. I have also experience in
-              designing user interfaces and creating user experiences.
+              I have experience in developing web applications, mobile applications. I have also experience in designing user interfaces and creating user experiences.
             </p>
 
             {/* stats */}
@@ -77,10 +77,17 @@ const About = () => {
             </div>
 
             <div className="flex gap-x-8 items-center">
-              <button className="btn btn-lg">Contact Me</button>
-              <a href="#" className="text-gradient btn-link">
+              <Link to='contact' activeClass='active' smooth={true} spy={true} className="cursor-pointer btn items-center 
+                                          justify-center
+                                          ">
+                <button className="btn btn-sm">
+                  Contact Me
+                </button>
+              </Link>
+              <Link to='work' activeClass='active' smooth={true} spy={true} className="cursor-pointer text-gradient btn-link
+                                          ">
                 My Portfolio
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

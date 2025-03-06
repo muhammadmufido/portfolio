@@ -4,28 +4,33 @@ import { BsArrowUpRight } from 'react-icons/bs'
 //motion
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { BiHomeAlt, BiUser } from 'react-icons/bi';
+import { BsClipboardData, BsBriefcase, BsChatSquare, BsChatSquareText } from 'react-icons/bs';
+//link
+import { Link } from 'react-scroll';
 
 //services
 const services = [
-  {
-    name: "UI/UX Design",
-    description:
-      "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
-    Link: "Learn more",
-  },
-  {
-    name: "frontend development",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
-    Link: "Learn more",
-  },
-  {
-    name: "mobile app development",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
-    Link: "Learn more",
-  },
-];
+    {
+      name: "Frontend Development",
+      description:
+        "Membangun antarmuka web modern menggunakan teknologi terbaru seperti html, css, js, laravel, React.js, Tailwind CSS, dan lainnya untuk pengalaman pengguna yang optimal.",
+      Link: "Learn more",
+    },
+    {
+      name: "Mobile App Development",
+      description:
+        "Mengembangkan aplikasi mobile berkinerja tinggi dengan Flutter, menghadirkan solusi inovatif yang kompatibel di berbagai perangkat.",
+      Link: "Learn more",
+    },
+    {
+      name: "UI/UX Design",
+      description:
+        "Merancang antarmuka yang intuitif dan estetis dengan fokus pada pengalaman pengguna yang mudah, menarik, dan efisien.",
+      Link: "Learn more",
+    },
+  ];
+
 
 const Services = () => {
   return (
@@ -43,10 +48,16 @@ const Services = () => {
             <h2 className="h2 text-accent mb-6">What I Do.</h2>
             <h3 className="h3 max-w-[455px] mb-16">
               I have experience in developing web applications, mobile
-              applications, and desktop applications. I have also experience in
+              applications. I have also experience in
               designing user interfaces and creating user experiences.
             </h3>
-            <button className="btn btn-sm">See my work</button>
+            <Link to='work' activeClass='active' smooth={true} spy={true} className="cursor-pointer btn items-center 
+                                       justify-center
+                                       ">
+              <button className="btn btn-sm">
+                See my work
+              </button>
+            </Link>
           </motion.div>
           {/* services */}
           <motion.div
@@ -63,7 +74,7 @@ const Services = () => {
                 const { name, description, Link } = service;
                 return (
                   <div
-                    className="border-b border-white/20 h-[146px] mb-[38px] flex"
+                    className="border-b border-white/20 h-[146px] mb-[50px] flex items-center justify-between"
                     key={index}
                   >
                     <div className="max-w-[476px]">

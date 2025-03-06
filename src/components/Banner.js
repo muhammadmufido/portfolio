@@ -2,11 +2,16 @@ import React from "react";
 // image
 import image from "../assets/avatar.svg";
 // icons
-import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
+import { FaGithub, FaYoutube, FaDribbble, FaInstagram, FaWhatsapp } from "react-icons/fa";
 // type animation
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { BiHomeAlt, BiUser } from 'react-icons/bi';
+import { BsClipboardData, BsBriefcase, BsChatSquare, BsChatSquareText } from 'react-icons/bs';
+//link
+import { Link } from 'react-scroll';
+
 
 
 
@@ -22,9 +27,9 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
+              className="text-[55px] font-bold leading-[0.8] lg:text-[100px]"
             >
-              BEN <span>AIDEN</span>
+              BAYU <span>TRI</span>
             </motion.h1>
             <motion.div
               variants={fadeIn("up", 0.4)}
@@ -40,8 +45,6 @@ const Banner = () => {
                   2000,
                   "Designer",
                   2000,
-                  "Creator",
-                  2000,
                 ]}
                 speed={50}
                 className="text-accent"
@@ -56,8 +59,7 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              Saya adalah seorang siswa SMK jurusan Rekayasa Perangkat Lunak
-              (RPL) yang antusias di bidang pengembangan perangkat lunak.
+              I am a vocational high school student majoring in Software Engineering (RPL) who is enthusiastic about software development.
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.3)}
@@ -66,10 +68,17 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact Me</button>
-              <a href="#" className="text-gradient btn-link">
+              <Link to='contact' activeClass='active' smooth={true} spy={true} className="cursor-pointer btn items-center 
+                             justify-center
+                             ">
+                <button className="btn btn-sm">
+                  Contact Me
+                </button>
+              </Link>
+              <Link to='work' activeClass='active' smooth={true} spy={true} className="cursor-pointer text-gradient btn-link
+                             ">
                 My Portfolio
-              </a>
+              </Link>
             </motion.div>
             {/* Social */}
             <motion.div
@@ -79,14 +88,14 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="#">
-                <FaYoutube />
+              <a href="https://wa.me/6285602785427?text=Halo%21%20Saya%20melihat%20karya%20Anda%20sangat%20menarik.%20Bisa%20kita%20diskusikan%20peluang%20kolaborasi%3F" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/bayu_tri_syh?igsh=NXlhdWVrOW1lYWN3" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
+              <a href="https://github.com/bayu77-app" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
-              </a>
-              <a href="#">
-                <FaDribbble />
               </a>
             </motion.div>
           </div>
