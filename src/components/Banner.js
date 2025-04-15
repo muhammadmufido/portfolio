@@ -21,7 +21,6 @@ const Banner = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-y-8 lg:gap-x-12">
         
-
           {/* image */}
           <motion.div
             variants={fadeIn("down", 0.5)}
@@ -50,7 +49,7 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
             >
-              <span className="text-white mr-4">I am a</span>
+              <span className="text-white mr-4">Saya seorang</span>
               <TypeAnimation
                 sequence={[
                   "Developer",
@@ -71,7 +70,7 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              I am a vocational high school student majoring in Software Engineering (RPL) who is enthusiastic about software development.
+              Saya seorang siswa sekolah menengah kejuruan jurusan Rekayasa Perangkat Lunak (RPL) yang memiliki minat dalam pengembangan perangkat lunak.
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.3)}
@@ -87,29 +86,12 @@ const Banner = () => {
                   Contact Me
                 </button>
               </Link>
-              <Link to='work' activeClass='active' smooth={true} spy={true} className="cursor-pointer text-gradient btn-link
+              <Link to='work' activeClass='active' smooth={true} spy={true} className="cursor-pointer text-blue-400 font-semibold btn-link
                              ">
                 My Portfolio
               </Link>
             </motion.div>
-            {/* Social */}
-            <motion.div
-              variants={fadeIn("up", 0.6)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
-            >
-              <a href="https://wa.me/6285602785427?text=Halo%21%20Saya%20melihat%20karya%20Anda%20sangat%20menarik.%20Bisa%20kita%20diskusikan%20peluang%20kolaborasi%3F" target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp />
-              </a>
-              <a href="https://www.instagram.com/bayu_tri_syh?igsh=NXlhdWVrOW1lYWN3" target="_blank" rel="noopener noreferrer">
-                <FaInstagram />
-              </a>
-              <a href="https://github.com/bayu77-app" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
-              </a>
-            </motion.div>
+           
           </div>
         </div>
       </div>

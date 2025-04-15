@@ -92,7 +92,7 @@ const Services = () => {
                       >
                         <BsArrowUpRight />
                       </a>
-                      <a href="#" className="text-gradient text-sm">
+                      <a href="#" className="cursor-pointer text-white font-semibold btn-link">
                         {Link}
                       </a>
                     </div>
