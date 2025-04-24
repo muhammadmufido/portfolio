@@ -1,108 +1,93 @@
 import React from "react";
-//motion
 import { motion } from "framer-motion";
-//variants
 import { fadeIn } from "../variants";
-//img
-import Img1 from "../assets/portfolio-img1.png";
-//img
-import Img2 from "../assets/portfolio-img2.png";
-//img
-import Img3 from "../assets/portfolio-img3.png";
+import Img1 from "../assets/todolist.png";
+import Img2 from "../assets/airplane.png";
+import Img3 from "../assets/portfolio.svg";
+import { Link } from "react-scroll";
+import { href } from "react-router-dom";
+
+const projects = [
+  {
+    title: "📝 Todolist",
+    type: "Mobile App",
+    image: Img1,
+    description: "Aplikasi untuk mencatat dan mengelola aktivitas harian. Menggunakan flutter sebagai framework untuk pengembangan aplikasi.",
+    Link: "↗️",
+    href: "https://github.com/bayu-Apps/Todo-list-application",
+
+  },
+  {
+    title: "✈️ Airplane",
+    type: "Mobile Apps",
+    image: Img2,
+    description: "Sebuah aplikasi mobile untuk memesan tiket pesawat, Menggunakan flutter sebagai framework untuk pengembangan aplikasi.",
+    Link: "↗️",
+  },
+  {
+    title: "🌐Portfolio",
+    type: "Frontend Web",
+    image: Img3,
+    description: "Website portfolio pribadi dengan animasi interaktif. Menggunakan tailwindcss, react.js, sebagai framework untuk pengembangan aplikasi.",
+    Link: "↗️",
+  },
+ 
+];
 
 const Work = () => {
   return (
-    <div className="section" id="work">
-      <div className="container mx-auto">
+    <section className="section bg-[#0f0f0f] text-white py-20" id="work">
+      <div className="container mx-auto px-4">
         <motion.div
-          variants={fadeIn("right", 0.3)}
+          variants={fadeIn("down", 0.3)}
           initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="flex flex-col lg:flex-row gap-x-10"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="text-center mb-12"
         >
-          <div className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
-            {/* text */}
-            <div>
-              <h2 className="h2 leading-tight text-blue-400">
-                My Latest <br />
-                Work.
-              </h2>
-              <p className="max-w-sm mb-16">
-                I have experience in developing web applications, mobile
-                applications, and desktop applications. I have also experience
-                in designing user interfaces and creating user experiences
-              </p>
-              <button className="btn btn-sm">View all Projects</button>
-            </div>
-            {/* img */}
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-              {/* img */}
-              <img
-                className="group-hover:scale-125 transition-all duration-500"
-                src={Img1}
-                alt=""
-              />
-              {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">Mobile App</span>
-              </div>
-              {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Todo List</span>
-              </div>
-            </div>
-          </div>
-          <motion.div
-            variants={fadeIn("left", 0.5)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-12 lg:gap-y-[70px] "
-          >
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-              {/* img */}
-              <img
-                className="group-hover:scale-125 transition-all duration-500"
-                src={Img2}
-                alt=""
-              />
-              {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">Mobile App</span>
-              </div>
-              {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Airplane</span>
-              </div>
-            </div>
+          <h2 className="text-4xl font-bold text-blue-400">My Projects</h2>
+          <p className="text-gray-400 mt-2">
+            Beberapa hasil karya yang pernah saya buat sebagai programmer pelajar.
+          </p>
+        </motion.div>
 
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-              {/* img */}
-              <img
-                className="group-hover:scale-125 transition-all duration-500"
-                src={Img3}
-                alt=""
-              />
-              {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient ">Frontend Development</span>
+        <motion.div
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group bg-[#1a1a1a] rounded-xl overflow-hidden shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300" />
               </div>
-              {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">portfolio</span>
+              <div className="flex justify-between">
+              <div className="p-5">
+                <h3 className="text-xl font-semibold text-white mb-1">{project.title}</h3>
+                <p className="text-sm text-blue-400 font-medium">{project.type}</p>
+                <p className="text-gray-400 mt-2 text-sm">{project.description}</p>
+
+              </div>
+                <div className="p-5 flex flex-col items-end">
+
+               <a href="https://github.com/bayu-Apps" className="text-[24px]">{project.Link}</a>
+                </div>
               </div>
             </div>
-          </motion.div>
+          ))}
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

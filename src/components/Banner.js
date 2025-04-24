@@ -1,98 +1,61 @@
 import React from "react";
-// image
-import image from "../assets/avatar.svg";
-// icons
-import { FaGithub, FaYoutube, FaDribbble, FaInstagram, FaWhatsapp } from "react-icons/fa";
-// type animation
+// Gambar profil bebas lisensi atau custom
+import image from "../assets/avatar2.png";
+import { FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { BiHomeAlt, BiUser } from 'react-icons/bi';
-import { BsClipboardData, BsBriefcase, BsChatSquare, BsChatSquareText } from 'react-icons/bs';
-//link
-import { Link } from 'react-scroll';
-
-
-
+import { Link } from "react-scroll";
 
 const Banner = () => {
   return (
-    <section className="min-h-[85vh] min-h-[78vh] flex items-center" id="home">
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-y-8 lg:gap-x-12">
-        
-          {/* image */}
-          <motion.div
-            variants={fadeIn("down", 0.5)}
-            initial="hidden"
-            whileInView={"show"}
-            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]"
-          >
-            <img src={image} alt="" className="max-w-sm lg:max-w-md" />
-          </motion.div>
+    <section className="min-h-screen flex items-center bg-gradient-to-b from-slate-900 to-slate-800" id="home">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
 
-            {/* text */}
-            <div className="flex-1 text-center font-secondary lg:text-left">
-            <motion.h1
-              variants={fadeIn("up", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[100px]"
-            >
-              BAYU <span className="text-blue-500">TRI</span>
-            </motion.h1>
-            <motion.div
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
-            >
-              <span className="text-white mr-4">Saya seorang</span>
+          {/* Text Section */}
+       
+
+          {/* Image Section */}
+          <motion.div
+            variants={fadeIn("down", 0.4)}
+            initial="hidden"
+            whileInView="show"
+            className="flex-1 flex justify-center"
+          >
+            <img src={image} alt="Bayu Tri" className="w-64 h-64 object-cover rounded-full border-4 border-blue-600 shadow-lg" />
+          </motion.div>
+          <motion.div
+            variants={fadeIn("up", 0.5)}
+            initial="hidden"
+            whileInView="show"
+            className="flex-1 text-center lg:text-left"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+              Hello, I'm <span className="text-blue-500">Bayu Tri</span>
+            </h1>
+            <div className="text-xl sm:text-2xl text-gray-300 mb-4">
+              I'm a passionate&nbsp;
               <TypeAnimation
-                sequence={[
-                  "Developer",
-                  2000,
-                  "Designer",
-                  2000,
-                ]}
-                speed={50}
-                className="text-blue-500"
-                wrapper="span"
+                sequence={["Developer", 2000, "Designer", 2000]}
+                speed={40}
+                className="text-blue-400 font-semibold"
                 repeat={Infinity}
               />
-            </motion.div>
-            <motion.p
-              variants={fadeIn("up", 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
-            >
-              Saya seorang siswa sekolah menengah kejuruan jurusan Rekayasa Perangkat Lunak (RPL) yang memiliki minat dalam pengembangan perangkat lunak.
-            </motion.p>
-            <motion.div
-              variants={fadeIn("up", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
-            >
-              <Link to='contact' activeClass='active' smooth={true} spy={true} className="cursor-pointer btn items-center 
-                             justify-center
-                             ">
-                <button className="btn btn-sm">
-                  Contact Me
-                </button>
+            </div>
+            <p className="text-gray-400 max-w-md mx-auto lg:mx-0 mb-6">
+              Siswa SMK jurusan Rekayasa Perangkat Lunak yang fokus pada pengembangan web dan aplikasi mobile. Siap belajar dan tumbuh di dunia teknologi.
+            </p>
+            <div className="flex justify-center lg:justify-start gap-4 ">
+              <Link to="contact" smooth spy className="btn btn-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg ">
+                Hubungi Saya
               </Link>
-              <Link to='work' activeClass='active' smooth={true} spy={true} className="cursor-pointer text-blue-400 font-semibold btn-link
-                             ">
-                My Portfolio
+              <Link to="work" smooth spy className="btn-link text-blue-300 hover:underline text-sm font-semibold text-center self-center">
+                Lihat Portofolio
               </Link>
-            </motion.div>
-           
-          </div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

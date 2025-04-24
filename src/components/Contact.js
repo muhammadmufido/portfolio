@@ -30,8 +30,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 lg:section" id="contact">
+    <section className="py-16 lg:section bg-gradient-to-b from-slate-900 to-slate-800" id="contact">
+     
       <div className="container mx-auto">
+      <div>
         <div className="flex flex-col lg:flex-row">
           {/* Text Section */}
           <div className="mr-10 mb-6">
@@ -92,7 +94,7 @@ const Contact = () => {
             viewport={{ once: false, amount: 0.7 }}
             className="flex-1 backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl shadow-2xl p-8 flex flex-col gap-6"
           >
-            <h3 className="text-2xl font-semibold text-white">Let's talk</h3>
+            <h3 className="text-2xl font-semibold text-white">Hubungi Saya</h3>
 
             <input
               className="bg-transparent border border-white/30 focus:border-accent text-white rounded-xl py-3 px-4 placeholder:text-white/60 focus:outline-none transition-all"
@@ -114,10 +116,20 @@ const Contact = () => {
               type="submit"
               className="self-end btn hover:btn text-white py-3 px-8 rounded-full text-lg font-semibold shadow-md transition-all"
             >
-              Send
+              Kirim
             </button>
           </motion.form>
         </div>
+      </div>
+     
+      <div>
+      <p className="text-sm text-gray-500 text-center mt-8">
+         © {new Date().getFullYear()} <a href="https://www.instagram.com/bayu_tri_syh?igsh=NXlhdWVrOW1lYWN3" className="text-blue-500">
+         Bayu Trihardian Syah
+          </a>. Desain terinspirasi oleh <a href="https://www.youtube.com/watch?v=Hps-XPN1GeE" className="text-blue-500">
+          Cristian Mihai</a>.
+    </p>
+      </div>
       </div>
     </section>
   );

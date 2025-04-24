@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="py-4 w-full z-50 fixed top-0">
+    <header className="py-4 w-full bg-[#0f0f0f] z-50 fixed top-0">
       <div className="container mx-auto">
         <div className="flex items-center justify-between relative">
           {/* Logo */}
@@ -61,7 +61,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav (Dikembalikan ke posisi semula) */}
-          <nav className="hidden lg:flex gap-x-6 text-white">
+          <nav className="hidden lg:flex gap-x-6 text-white items-center">
             <Link
               to="home"
               smooth={true}
@@ -79,14 +79,7 @@ const Header = () => {
             >
               <BiUser size={24} />
             </Link>
-            <Link
-              to="services"
-              smooth={true}
-              spy={true}
-              className="cursor-pointer hover:text-blue-600"
-            >
-              <BsClipboardData size={24} />
-            </Link>
+          
             <Link
               to="work"
               smooth={true}
@@ -111,7 +104,7 @@ const Header = () => {
 };
 
 const NavLinks = ({ handleClick }) => (
-  <>
+  <div>
     <Link
       to="home"
       smooth={true}
@@ -131,15 +124,7 @@ const NavLinks = ({ handleClick }) => (
     >
       <BiUser />
     </Link>
-    <Link
-      to="services"
-      smooth={true}
-      spy={true}
-      onClick={handleClick}
-      className="cursor-pointer text-2xl hover:text-blue-600"
-    >
-      <BsClipboardData />
-    </Link>
+   
     <Link
       to="work"
       smooth={true}
@@ -158,7 +143,7 @@ const NavLinks = ({ handleClick }) => (
     >
       <BsChatSquareText />
     </Link>
-  </>
+  </div>
 );
 
 export default Header;

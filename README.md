@@ -79,6 +79,6 @@ Jika ingin berkontribusi:
 
 Jika ada pertanyaan atau saran, hubungi saya di:
 
-- GitHub: [bayu77-app](https://github.com/bayu77-app)
+- GitHub: [bayu-Apps](https://github.com/bayu-Apps)
 - Email: bayurara555@gmail.com
 
