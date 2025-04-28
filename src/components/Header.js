@@ -7,7 +7,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Tutup menu saat klik di luar menu
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -34,7 +33,7 @@ const Header = () => {
         <div className="flex items-center justify-between relative">
           {/* Logo */}
           <a href="#" className="hidden lg:inline">
-            <h1 className="lg:text-[36px] text-[18px] text-blue-700 font-bold">
+            <h1 className="lg:text-[36px] text-[16px] text-blue-700 font-bold">
               BAYU TRIHARDIAN <br />
               <span className="text-white">SYAH</span>
             </h1>
@@ -60,7 +59,7 @@ const Header = () => {
             )}
           </div>
 
-          {/* Desktop Nav (Dikembalikan ke posisi semula) */}
+          
           <nav className="hidden lg:flex gap-x-6 text-white items-center">
             <Link
               to="home"
